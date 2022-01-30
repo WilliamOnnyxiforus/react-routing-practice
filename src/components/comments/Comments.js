@@ -38,12 +38,12 @@ const Comments = () => {
     );
   }
 
-  if (status == "completed" && loadedComments && loadedComments.length > 0) {
+  if (status === "completed" && loadedComments && loadedComments.length > 0) {
     comments = <CommentsList comments={loadedComments} />;
   }
 
   if (
-    status == "completed" &&
+    status === "completed" &&
     (!loadedComments || loadedComments.length === 0)
   ) {
     comments = <p className="centered">No comments were added yet!</p>;
